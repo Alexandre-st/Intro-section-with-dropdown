@@ -17,8 +17,12 @@
     <header>
       <div class="container container-space">
         <div class="navigation-mobile">
-          <img src="./assets/logo.svg" alt="Snap" />
-          <img src="./assets/icons/icon-menu.svg" alt="Menu for navigation" />
+          <img class="logo" src="./assets/logo.svg" alt="Snap" />
+          <img
+            class="menu"
+            src="./assets/icons/icon-menu.svg"
+            alt="Menu for navigation"
+          />
           <div class="nav-wrapper">
             <nav class="nav-menu">
               <ul class="nav-menu-list">
@@ -52,7 +56,7 @@
       </div>
     </header>
     <main>
-      <div class="main">
+      <section class="main">
         <div class="hero container">
           <picture>
             <source
@@ -68,15 +72,17 @@
             Get your team in sync, no matter your location. Streamline
             processes, create team rituals, and watch productivity soar.
           </p>
-          <div class="content-button" role="button">Learn more</div>
+          <div class="content-button" role="button">
+            <p>Learn more</p>
+          </div>
         </div>
-        <div class="images">
+        <div class="images container container-space">
           <img src="./assets/client-databiz.svg" alt="Databiz" />
           <img src="./assets/client-audiophile.svg" alt="Audiophile" />
           <img src="./assets/client-meet.svg" alt="Meet" />
           <img src="./assets/client-maker.svg" alt="Maker" />
         </div>
-      </div>
+      </section>
     </main>
     <footer></footer>
   </body>
