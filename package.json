@@ -1,0 +1,26 @@
+{
+  "name": "intro-section-with-dropdown",
+  "description": "",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Alexandre-st/Intro-section-with-dropdown.git"
+  },
+  "author": "Alexandre-st",
+  "license": "MIT",
+  "keywords": [
+    "PARCEL",
+    "JS",
+    "SASS"
+  ],
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel start",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "parcel": "^2.7.0",
+    "sass": "^1.55.0"
+  }
+}
