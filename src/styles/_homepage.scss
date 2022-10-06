@@ -2,6 +2,7 @@
 
 // Header part for mobile screen
 .navigation-mobile {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,15 +20,47 @@
         width: 8.7rem;
     }
 
+    // Toggle button to show the menu
     .menu {
-        width: 3.2rem;
-        height: 1.8rem;
+        &-close {
+            display: none;
+        }
+        
+        &.active {
+            .menu-hamburger {
+                display: none;
+            }
+    
+            .menu-close {
+                display: block;
+            }
+        }
+    } 
+}
+
+
+
+// Navigation for mobile devices
+.nav-wrapper {
+    display: none;
+    position: relative;
+
+    &.active {
+        display: block;
+        position: absolute;
+        background-color: #FFFFFF;
+        top: 3.2rem;
+        width: 24rem;
+        right: 0;
+        z-index: 1
+    }
+    
+    &-menu {
+        
     }
 }
 
-.nav-wrapper {
-    display: none;
-}
+
 
 // Hero part (image)
 // .hero {}

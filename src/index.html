@@ -18,24 +18,31 @@
       <div class="container container-space">
         <div class="navigation-mobile">
           <img class="logo" src="./assets/logo.svg" alt="Snap" />
-          <img
-            class="menu"
-            src="./assets/icons/icon-menu.svg"
-            alt="Menu for navigation"
-          />
+          <div class="menu" role="button">
+            <img
+              class="menu-hamburger"
+              src="./assets/icons/icon-menu.svg"
+              alt="To open the menu"
+            />
+            <img
+              class="menu-close"
+              src="./assets/icons/icon-close-menu.svg"
+              alt="To close the menu"
+            />
+          </div>
           <div class="nav-wrapper">
-            <nav class="nav-menu">
-              <ul class="nav-menu-list">
+            <nav class="nav-wrapper-menu">
+              <ul class="nav-wrapper-menu-list">
                 <li>Features</li>
                 <li>Company</li>
                 <li>Careers</li>
                 <li>About</li>
               </ul>
+              <ul class="nav-menu-button">
+                <li>Login</li>
+                <li>Register</li>
+              </ul>
             </nav>
-            <ul class="nav-menu-button">
-              <li>Login</li>
-              <li>Register</li>
-            </ul>
           </div>
         </div>
         <div class="navigation-desktop">
@@ -85,5 +92,7 @@
       </section>
     </main>
     <footer></footer>
+
+    <script src="./app.js"></script>
   </body>
 </html>
