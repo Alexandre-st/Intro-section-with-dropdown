@@ -52,6 +52,11 @@
         right: -1.6rem;
         z-index: 1;
 
+        @include mq(tablet) {
+            right: -4rem;
+        }
+
+        // The mask for the background menu
         &::before {
             content: "";
             position: absolute;
@@ -110,12 +115,36 @@
 
 
 // Hero part (image)
-// .hero {}
+    .main {
+        @include mq(laptop) {
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 12.5rem;
+            align-items: center;
+            max-width: 114.5rem;
+            margin: auto;
+            margin-top: 5.8rem;
+        }
+    } 
+
+    .hero {
+        @include mq(laptop) {
+            margin-right: 4rem;
+        }
+
+        @include mq(desktop) {
+            margin-right: 0;
+        }
+    }
 
 // Content part (text part)
 .content {
     margin-top: 4.8rem;
     text-align: center;
+
+    @include mq(laptop) {
+        text-align: start;
+    }
 
     &-title {
         font-size: 3.6rem;
@@ -123,6 +152,16 @@
         font-weight: 700;
         letter-spacing: -0.5px;
         color: #151515;
+
+        @include mq(laptop) {
+            font-size: 8rem;
+            line-height: 8rem;
+            letter-spacing: -1.11111px;
+        }
+
+        @include mq(desktop) {
+            width: 53rem;
+        }
     }
 
     &-text {
@@ -131,6 +170,13 @@
         font-weight: 500;
         color: #686868;
         margin: 1.6rem 0 2.4rem 0;
+
+        @include mq(laptop) {
+            margin: 4.8rem 0 5.1rem 0;
+            font-size: 1.8rem;
+            line-height: 2.8rem;
+            width: 44.5rem;
+        }
     }
 
     &-button {
@@ -143,6 +189,11 @@
         height: 4.8rem;
         border-radius: 1.5rem;
         margin: auto;
+
+        @include mq(laptop) {
+            margin: 0;
+        }
+
 
         p {
            padding: 1.2rem 2rem 1rem 2.4rem; 
@@ -160,6 +211,11 @@
 
     @include mq(tablet) {
         gap: 4rem;
+    }
+
+    @include mq(laptop) {
+        justify-content: flex-start;
+        margin-top: 10.8rem;
     }
 
     img {
@@ -195,7 +251,6 @@
         line-height: 1.6rem;
         font-weight: 500;
         color: #686868;
-
 
         .logo {
             width: fit-content;
