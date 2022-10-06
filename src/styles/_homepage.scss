@@ -1,10 +1,4 @@
-.navigation-desktop {
-    display: none;
-}
-
-.nav-wrapper {
-    display: none;
-}
+@use './mixins' as *;
 
 // Header part for mobile screen
 .navigation-mobile {
@@ -12,6 +6,14 @@
     justify-content: space-between;
     align-items: center;
     padding: 1.6rem 0 2.4rem 0;
+
+    @include mq(tablet) {
+        padding: 2.5rem 0 4rem 0;
+    }
+
+    @include mq(laptop) {
+        display: none;
+    }
 
     .logo {
         width: 8.7rem;
@@ -21,6 +23,10 @@
         width: 3.2rem;
         height: 1.8rem;
     }
+}
+
+.nav-wrapper {
+    display: none;
 }
 
 // Hero part (image)
@@ -69,7 +75,12 @@
     margin-top: 4.8rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 2.7rem;
+
+    @include mq(tablet) {
+        gap: 4rem;
+    }
 
     img {
         &:nth-child(1) {
@@ -88,6 +99,46 @@
         &:nth-child(4) {
             width: 5.89rem;
             height: 1.723rem;
+        }
+    }
+}
+
+// Navbar for desktop
+.navigation-desktop {
+    display: none;
+
+    @include mq(laptop) {
+        display: flex;
+        align-items: center;
+        margin: 2.2rem 0;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+        font-weight: 500;
+        color: #686868;
+
+
+        .logo {
+            width: fit-content;
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 4rem;
+            margin-left: 6.224rem;
+        }
+
+        .nav-button {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            margin-left: auto;
+
+            :last-child {
+                border: 1px solid #686868;
+                border-radius: 1.4rem;
+                width: 10.4rem;
+                padding: 1.3rem 2.2rem 1.3rem 2.2rem; 
+            }
         }
     }
 }

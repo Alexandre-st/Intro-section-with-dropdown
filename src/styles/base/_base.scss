@@ -16,8 +16,12 @@ body {
 
     &-space {
         padding: 0 1.6rem;
+
+        @include mq(tablet) {
+            padding: 0 4rem;
+        }
     
-        @include mq(laptop) {
+        @include mq(desktop) {
             padding: 0;
         }
     }
