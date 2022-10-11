@@ -31,7 +31,7 @@
             .menu-hamburger {
                 display: none;
             }
-    
+
             .menu-close {
                 display: block;
             }
@@ -111,8 +111,6 @@
         }
     }
 }
-
-
 
 // Hero part (image)
     .main {
@@ -262,6 +260,7 @@
 
             &-details {
                 position: relative;
+                display: inline-block; 
             }
 
             &-summary {

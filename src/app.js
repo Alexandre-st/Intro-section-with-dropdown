@@ -1,37 +1,24 @@
 // Selector for the menu
 const menu = document.querySelector('.menu');
 const showMenu = document.querySelector('.nav-wrapper');
-// Selector for the rotation
-// const marker = document.querySelector('.marker');
-// const details = document.querySelector('.nav-list-details');
-const details = document.querySelectorAll('.nav-list-details');
+// Selector for the dropdown rotation
+const firstDetail = document.querySelector('.nav-list-details-first');
+const secondDetail = document.querySelector('.nav-list-details-second');
+const marker = document.querySelector('.marker');
+const marker2 = document.querySelector('.marker2');
 
 // Logic for the menu on mobile devices
-menu.addEventListener('click', () => {
+menu.onmouseover = () => {
     menu.classList.toggle('active'); 
     showMenu.classList.toggle('active');
+};
+
+// Effect for the toggle dropdown menu
+firstDetail.addEventListener('toggle', () => {
+    firstDetail.open ? marker.style.transform = 'rotate(180deg)' : marker.style.transform = 'rotate(0)';
 });
 
-// Logic to rotate the marker when the details is clicked
-details.forEach((detail) => {
-    detail.addEventListener('toggle', () => {
-            const marker = document.querySelector('.marker');
-            // marker.style.transform = detail.open ? 'rotate(180deg)' : 'rotate(0)';
-        if (detail.open) {
-            marker.style.transform = 'rotate(180deg)';
-        } else {
-            marker.style.transform = 'rotate(0)';
-        }
-        // markers.forEach(marker => {
-        //     if (detail.open) {
-        //         marker.style.transform = 'rotate(180deg)';
-        //     } else {
-        //         marker.style.transform = 'rotate(0)';
-        //     }
-        // })
-    })
-});
+secondDetail.addEventListener('toggle', () => {
+    secondDetail.open ? marker2.style.transform = 'rotate(180deg)' : marker2.style.transform = 'rotate(0)';
+})
 
-// details.forEach(detail => console.log(detail));
-
-// console.log(details.open);
