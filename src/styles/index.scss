@@ -2,6 +2,9 @@
 @use "./base/reset";
 @use "./base/base";
 
+// == COMPONENTS == //
+@use './menu';
+
 // == HOMEPAGE == //
 @use "./homepage";
 
