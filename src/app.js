@@ -6,6 +6,7 @@ const firstDetail = document.querySelector('.nav-list-details-first');
 const secondDetail = document.querySelector('.nav-list-details-second');
 const menuDetail = document.querySelector('.menu-details-first');
 const secondMenuDetail = document.querySelector('.menu-details-second');
+// Selector for the marker
 const marker = document.querySelector('.marker');
 const marker2 = document.querySelector('.marker2');
 const menuMarker = document.querySelector('.menu-marker')

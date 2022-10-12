@@ -6,72 +6,75 @@
   position: relative;
 
   &.active {
-      display: block;
+    display: block;
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    right: -1.6rem;
+    z-index: 1;
+
+    @include mq(tablet) {
+      right: -4rem;
+    }
+
+    // The mask for the background menu
+    &::before {
+      content: "";
       position: absolute;
-      width: 100vw;
-      top: 0;
-      right: -1.6rem;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #151515;
+      opacity: 0.75;
       z-index: 1;
-
-      @include mq(tablet) {
-          right: -4rem;
-      }
-
-      // The mask for the background menu
-      &::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          height: 100%;
-          width: 100%;
-          background-color: #151515;
-          opacity: 0.75;
-          z-index: 1;
-      }
+    }
   }
 
   &-menu {
-      position: relative;
-      padding-top: 7.8rem;
-      width: 24rem;
-      height: 100vh;
-      font-size: 1.6rem;
-      line-height: 2.6rem;
-      font-weight: 500;
-      margin-left: auto;
-      background-color: #FFFFFF;
-      color: #686868;
-      z-index: 2;
+    position: relative;
+    padding-top: 7.8rem;
+    width: 24rem;
+    height: 100vh;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    font-weight: 500;
+    margin-left: auto;
+    background-color: #FFFFFF;
+    color: #686868;
+    z-index: 2;
 
+    &-list {
+      padding-left: 2.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+    }
 
-      &-list {
-          padding-left: 2.4rem;
-          display: flex;
-          flex-direction: column;
-          gap: 1.6rem;
+    &-button {
+      margin-top: 3.2rem;
+      text-align: center;
+
+      li {
+        margin-bottom: 1.6rem;
       }
 
-      &-button {
-          margin-top: 3.2rem;
-          text-align: center;
-
-          li {
-              margin-bottom: 1.6rem;
-          }
-
-          :last-child {
-              border: 1px solid #686868;
-              border-radius: 1.4rem;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              width: 19.5rem; 
-              height: 4.2rem;
-              margin: auto;
-          }
+      :last-child {
+        border: 1px solid #686868;
+        border-radius: 1.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 19.5rem; 
+        height: 4.2rem;
+        margin: auto;
       }
+    }
   }
 }
+
+::marker {
+  font-size: 0;
+} 
 
 // Inside of the menu with the details part for navigation
 .menu-details {
