@@ -9,7 +9,7 @@ const secondMenuDetail = document.querySelector('.menu-details-second');
 // Selector for the marker
 const marker = document.querySelector('.marker');
 const marker2 = document.querySelector('.marker2');
-const menuMarker = document.querySelector('.menu-marker')
+const menuMarker = document.querySelector(".marker .menu-marker");
 const menuMarker2 = document.querySelector('.menu-marker2')
 
 // Logic for the menu on mobile devices

@@ -9,7 +9,6 @@
   "author": "Alexandre-st",
   "license": "MIT",
   "keywords": [
-    "PARCEL",
     "JS",
     "SASS"
   ],
@@ -20,9 +19,10 @@
     "build": "parcel build"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "2.7.0",
-    "htmlhint": "^1.1.4",
-    "parcel": "^2.7.0",
+    "@parcel/transformer-sass": "2.8.3",
     "sass": "^1.55.0"
+  },
+  "dependencies": {
+    "parcel": "^2.8.3"
   }
 }
